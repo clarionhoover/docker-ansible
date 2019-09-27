@@ -1,0 +1,17 @@
+FROM alpine:3.10.2
+
+LABEL maintainer="RandyHoover@gmail.com"
+LABEL maintainer_github="https://www.github.com/clarionhoover"
+
+ENV PYTHON_VERSION=3.7.3-r0
+ENV ANSIBLE_VERSION=2.8.5
+
+RUN apk add --no-cache python3==$PYTHON_VERSION sshpass ca-certificates openssl openssh-client rsync \
+  && apk --update add --virtual build-dependencies python3-dev libffi-dev openssl-dev build-base \
+  && pip3 install --upgrade pip \
+  && pip3 install ansible==$ANSIBLE_VERSION \
+  && pip3 install --upgrade pycrypto pywinrm \
+  && apk del build-dependencies --no-cache \
+  && rm -fr /var/cache/apk/*
+
+RUN [ "ansible-playbook", "--version" ]
