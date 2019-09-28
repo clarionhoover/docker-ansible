@@ -34,7 +34,7 @@ I've seen a couple of different docker-ansible containers but a lot of them I di
 Distributed under the MIT License. see [`LICENSE.md`](./LICENSE.md) for more information
 
 ## Contact
-Randy Hoover - [@rhoover](https://twitter.com/rhoover) - me@clarionhoover.com
+Randy Hoover - [@rhoover](https://twitter.com/rhoover)
 Project Link: [https://github.com/clarionhoover/docker-ansible](https://github.com/clarionhoover/docker-ansible)
 
 [contributors-shield]: https://img.shields.io/github/contributors/clarionhoover/docker-ansible.svg?style=flat-square
